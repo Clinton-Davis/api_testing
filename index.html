@@ -5,11 +5,16 @@
 		<meta name="viewport" content="initial-scale=1.0" />
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="./assets/style.css" type="text/css" />
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.js"
+			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<div id="map"></div>
-		<div id="weather"><h2>Weather</h2></div>
-		<script>
+		<div id="output"><h2>Weather</h2></div>
+		<!--<script>
 			var map;
 			function initMap() {
 				map = new google.maps.Map(document.getElementById("map"), {
@@ -17,11 +22,13 @@
 					zoom: 10
 				});
 			}
-		</script>
-		<script
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbHDaktZANo7GU7K1OpnhE5X7YB3M_vlE&callback=initMap"
+		</script> -->
+		<script src="weather_api.js"></script>
+
+		<!--<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaqAp28P-jkpfTyo9EZ6pP6VcGKEunTTk&callback=initMap"
 			async
 			defer
-		></script>
+		></script>-->
 	</body>
 </html>
