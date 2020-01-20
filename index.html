@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<script src="weather_api.js"></script>
-		<title>Api Testing</title>
+		<title>Api_testing</title>
+		<meta name="viewport" content="initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="./assets/style.css" type="text/css" />
 	</head>
 	<body>
-		<div id="output"></div>
-		<input type="number" />
-
-		<button>Click</button>
+		<div id="map"></div>
+		<div id="weather"><h2>Weather</h2></div>
+		<script>
+			var map;
+			function initMap() {
+				map = new google.maps.Map(document.getElementById("map"), {
+					center: { lat: -34.397, lng: 150.644 },
+					zoom: 10
+				});
+			}
+		</script>
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbHDaktZANo7GU7K1OpnhE5X7YB3M_vlE&callback=initMap"
+			async
+			defer
+		></script>
 	</body>
 </html>
