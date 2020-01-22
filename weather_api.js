@@ -7,6 +7,7 @@ const xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
 	if (this.readyState === 4 && this.status === 200) {
 		var obj = JSON.parse(this.responseText);
+		console.log(obj);
 
 		var city = obj.name;
 		var temps = "H " + obj.main.temp_max + " / " + obj.main.temp_min + " L";
@@ -15,7 +16,7 @@ xhr.onreadystatechange = function() {
 		writeToDoc();
 	}
 	function writeToDoc() {
-		document.getElementById("#weather").innerHTML = obj + "<br>" + temps;
+		document.getElementById("weather").innerHTML = "Cape Town" + "<br>" + temps;
 	}
 };
 xhr.open("GET", url + my_id + unit);
